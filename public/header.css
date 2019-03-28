@@ -1,0 +1,110 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+}
+
+body {
+	background-color: rgb(245, 245, 245);
+}
+
+@media only screen and (max-width: 600px) {
+	.navbar {
+		position: fixed;
+		display: grid;
+		grid-template: 2.6em / repeat(11, 1fr);
+		background-color: rgb(28, 28, 28);
+		align-items: center;
+		padding-left: 1em;
+		padding-right: 1em;
+	}
+
+	.name {
+		grid-area: 1 / 6 / span 1 / span 1;
+	}
+
+	.name h1 {
+		font-family: "Open Sans", sans-serif;
+		font-weight: normal;
+		font-size: 1.2em;
+		white-space: nowrap;
+	}
+
+	.name h1 a {
+		text-decoration: none;
+		color: rgb(245, 245, 245);
+	}
+
+	.about {
+		grid-area: 1 / 1 / span 1 / span 1;
+		justify-self: center;
+	}
+
+	.about a,
+	.contact a {
+		font-family: "Raleway", sans-serif;
+		text-decoration: none;
+		font-size: 0.9em;
+		color: rgb(245, 245, 245);
+	}
+
+	.contact {
+		grid-area: 1 / 11 / span 1 / span 1;
+		justify-self: center;
+	}
+
+	br {
+		line-height: 250%;
+	}
+}
+
+@media only screen and (min-width: 1200px) {
+	.navbar {
+		position: fixed;
+		display: grid;
+		grid-template: 2.6em / repeat(11, 1fr);
+		background-color: rgb(28, 28, 28);
+		align-items: center;
+		padding-left: 1em;
+		padding-right: 1em;
+		margin-right: 25%;
+		margin-left: 25%;
+	}
+
+	.name {
+		grid-area: 1 / 6 / span 1 / span 1;
+	}
+
+	.name h1 {
+		font-family: "Open Sans", sans-serif;
+		font-weight: normal;
+		font-size: 1.2em;
+		white-space: nowrap;
+	}
+
+	.name h1 a {
+		text-decoration: none;
+		color: rgb(245, 245, 245);
+	}
+
+	.about {
+		grid-area: 1 / 1 / span 1 / span 1;
+		justify-self: center;
+	}
+
+	.about a,
+	.contact a {
+		font-family: "Raleway", sans-serif;
+		text-decoration: none;
+		font-size: 0.9em;
+		color: rgb(245, 245, 245);
+	}
+
+	.contact {
+		grid-area: 1 / 11 / span 1 / span 1;
+		justify-self: center;
+	}
+
+	br {
+		line-height: 250%;
+	}
+}
