@@ -1,0 +1,148 @@
+/* Personal introduction */
+@media only screen and (max-width: 600px) {
+    .intro {
+        display: grid;
+        height: 96.4vh;
+        width: 100vw;
+        grid-template: repeat(3, 32.13vh) / repeat(3, 33.3vw);
+        align-items: end;
+        justify-items: center;
+    }
+
+    .intro h1:first-of-type {
+        font-family: "Quicksand", sans-serif;
+        text-transform: uppercase;
+        grid-area: 2 / 2 / span 1 / span 1;
+        font-size: 15.5vw;
+        font-weight: 400;
+        text-shadow: 1px 1px 2px;
+    }
+
+    .intro h1:last-of-type {
+        font-family: "Quicksand", sans-serif;
+        text-transform: uppercase;
+        grid-area: 2 / 2 / span 1 / span 1;
+        font-size: 6.5vw;
+        font-weight: 400;
+        text-shadow: 1px 1px 2px;
+        white-space: nowrap;
+        padding-bottom: 13vw;
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    .intro {
+        display: grid;
+        height: 96.4vh;
+        grid-template: repeat(3, 32.13vh) / repeat(3, 1fr);
+        align-items: end;
+        justify-items: center;
+    }
+
+    .intro h1:first-of-type {
+        font-family: "Quicksand", sans-serif;
+        text-transform: uppercase;
+        grid-area: 2 / 2 / span 1 / span 1;
+        font-size: 8vh;
+        font-weight: 400;
+        text-shadow: 1px 1px 2px;
+    }
+
+    .intro h1:last-of-type {
+        font-family: "Quicksand", sans-serif;
+        text-transform: uppercase;
+        grid-area: 2 / 2 / span 1 / span 1;
+        font-size: 4vh;
+        font-weight: 400;
+        text-shadow: 1px 1px 2px;
+        white-space: nowrap;
+        padding-bottom: 4vh;
+    }
+}
+
+.fade-slide {
+    animation: fadein 3s,
+        slide-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+@keyframes fadein {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slide-top {
+    0% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+
+    100% {
+        -webkit-transform: translateY(-1.5em);
+        transform: translateY(-2.5em);
+    }
+}
+
+/* Bouncing arrow */
+.fa-angle-down {
+    position: relative;
+    grid-area: 3 / 2 / span 1 / span 1;
+    padding-bottom: 6.5vh;
+    font-size: 4em;
+    animation: arrow-bounce 5s infinite;
+    align-self: end;
+}
+
+@keyframes arrow-bounce {
+    0% {
+        top: 0px;
+    }
+
+    10% {
+        top: 20px;
+    }
+
+    20% {
+        top: 0px;
+    }
+
+    100% {
+        top: 0px;
+    }
+}
+
+/* Three subjects */
+.subjects {
+    display: grid;
+    grid-template: 1fr / 1fr 3fr 1fr;
+    align-items: center;
+    justify-items: center;
+    font-family: "Open Sans", sans-serif;
+}
+
+.skills,
+.github {
+    padding: 0 0.5em;
+}
+
+.unselected {
+    opacity: 0.3;
+    transition: all 0.3s ease-in-out;
+}
+
+.selected {
+    opacity: 1;
+    transition: all 0.3s ease-in-out;
+}
+
+.selected-content {
+    display: initial;
+}
+
+.unselected-content {
+    display: none;
+}
