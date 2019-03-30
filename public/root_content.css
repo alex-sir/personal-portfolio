@@ -60,6 +60,7 @@
     }
 }
 
+/* Intro text animation */
 .fade-slide {
     animation: fadein 3s,
         slide-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
@@ -82,20 +83,45 @@
     }
 
     100% {
-        -webkit-transform: translateY(-1.5em);
+        -webkit-transform: translateY(-2.5em);
         transform: translateY(-2.5em);
     }
 }
 
-/* Bouncing arrow */
-.fa-angle-down {
+@media only screen and (max-width: 600px) {
+    /* .fa-angle-down {
+        position: relative;
+        grid-area: 3 / 2 / span 1 / span 1;
+        padding-bottom: 6.5vh;
+        font-size: 4em;
+        animation: arrow-bounce 5s infinite;
+        align-self: end;
+    } */
+    .intro a {
+        position: relative;
+        grid-area: 3 / 2 / span 1 / span 1;
+        padding-bottom: 6.5vh;
+        font-size: 4em;
+        animation: arrow-bounce 5s infinite;
+        align-self: end;
+    }
+}
+
+.intro a {
     position: relative;
     grid-area: 3 / 2 / span 1 / span 1;
-    padding-bottom: 6.5vh;
     font-size: 4em;
     animation: arrow-bounce 5s infinite;
     align-self: end;
 }
+
+/* .fa-angle-down {
+    position: relative;
+    grid-area: 3 / 2 / span 1 / span 1;
+    font-size: 4em;
+    animation: arrow-bounce 5s infinite;
+    align-self: end;
+} */
 
 @keyframes arrow-bounce {
     0% {
@@ -116,33 +142,28 @@
 }
 
 /* Three subjects */
-.subjects {
+#skills,
+#projects,
+#github {
     display: grid;
-    grid-template: 1fr / 1fr 3fr 1fr;
-    align-items: center;
-    justify-items: center;
-    font-family: "Open Sans", sans-serif;
+    width: 96.4vw;
+    height: 100vh;
+    grid-template: repeat(5, 20vh) / repeat(5, 20vw);
 }
 
-.skills,
-.github {
-    padding: 0 0.5em;
+.subject {
+    grid-area: 1 / 1 / span 1 / span 1;
+    align-self: end;
 }
 
-.unselected {
-    opacity: 0.3;
-    transition: all 0.3s ease-in-out;
+.subject:first-child {
+    font-family: "Raleway", sans-serif;
+    font-size: 4.5vw;
+    text-shadow: 1vw 1vw 6px rgba(28, 28, 28, 0.2);
 }
 
-.selected {
-    opacity: 1;
-    transition: all 0.3s ease-in-out;
-}
-
-.selected-content {
-    display: initial;
-}
-
-.unselected-content {
-    display: none;
+.skills-content,
+.projects-content,
+.github-content {
+    grid-area: 3 / 3 / span 1 / span 1;
 }
