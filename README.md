@@ -1,1 +1,3 @@
 # personal-portfolio
+### IN PROGRESS
+Probably going to scrap this...
